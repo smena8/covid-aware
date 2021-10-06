@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&family=Roboto:wght@100;400&display=swap');
+
+:root {
+    --green: #035755;
+    --coral: #FB4C47;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, html{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(to bottom, #FFF2F2, white 10%, white 90%, #FFF2F2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--green);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:focus-visible, a:focus-within {
+    color: var(--coral);
+}
+
+h1 {
+    color: var(--coral);
+    font-size: 1.17em;
+    font-weight: bolder;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+}
+
+h2, #contact h1 {
+    color: var(--green);
+    font-size: 2em;
+    font-weight: bolder;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+}
+
+h3, #contact h2 {
+    color: var(--green);
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+}
+
+.reports-card-container h1 {
+    color: var(--green);
+    font-size: 2em;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.reports-card-container h2 {
+    color: var(--green);
+    font-size: 1em;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+
+p {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+}
+
+small {
+	color: var(--green);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	font-size: 12px;
+}
+
+button {
+    background: var(--coral);
+    border: 2px solid var(--coral);
+    border-radius: 2em;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: .5em 2em;
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #BD3936;
+}
+
+nav button {
+    background: transparent;
+    color: var(--coral);
+    text-shadow: none;
+}
+
+header {
+    background: transparent;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+    margin: 1em;
+}
+
+.logo > * {
+    margin-right: .5em;
+}
+
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 1em;
+}
+
+#overview {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#overview > *:not(:last-child) {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+.overview-text {
+	margin: auto 0;
+	padding: 4em;
+	text-align: center;
+}
+
+.overview-svg {
+    margin: auto 0;
+}
+
+#overview > :last-child {
+    position: absolute;
+    bottom: -8em;
+    right: 0;
+    z-index: -1;
+}
+
+#overview > :last-child > :first-child {
+    position: absolute;
+    bottom:0;
+    right: 0;
+    z-index: -1;
+}
+
+#overview > :last-child > :last-child {
+    position: absolute;
+    bottom: -4em;
+    right: 3em;
+    z-index: -1;
+}
+
+#contagion {
+    margin: 4em;
+    position: relative;
+    text-align: center;
+}
+
+#contagion > *:not(:first-child):not(:last-child) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2em;
+}
+
+#contagion > *:not(:first-child):not(:last-child) > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+	background: white;
+	border-radius: 10px;
+	filter: drop-shadow(1px 1px 1em lightgray);
+	height: 25em;
+    width: 15em;
+	margin: 1em;
+	padding: 2em 1.5em;
+}
+
+#contagion > :last-child {
+    position: absolute;
+    bottom: 0;
+    left: 3em;
+    z-index: -1;
+}
+
+#symptom, #prevention {
+    position: relative;
+    margin: 2em;
+    text-align: center;
+}
+
+#prevention .prevention-column {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#prevention .prevention-column:first-child {
+    position: relative;
+}
+
+#prevention .prevention-column:first-child > :first-child > :last-child {
+    position: absolute;
+    bottom: -6em;
+    left: -14em;
+    z-index: -1;
+}
+
+#prevention .prevention-column > :first-child {
+    margin: auto;
+}
+
+.prevention-bullet {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    background-color: rgba(250, 86, 82, .2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: box-shadow(2px 2px 1px lightgray);
+    height: 25px;
+    width: 25px;
+    margin-right: 1em;
+    padding: 8px;
+}
+
+.number {
+    color: var(--coral);
+    font-size: 1.5rem;
+}
+
+#prevention > :last-child {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -5em;
+    right: -11em;
+    z-index: -1;
+}
+
+#prevention > :last-child > :first-child {
+    margin-bottom: 2em;
+}
+
+#reports {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#reports div.reports-map {
+    position: relative;
+}
+
+#reports div.reports-map > .zoom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2em;
+    filter: drop-shadow(1px 1px 25px lightgray);
+}
+
+#reports div.reports-map > .zoom > :first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.zoomin, .zoomout, .largearrowup, .largearrowdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    background: white;
+    color: darkgray;
+    padding: 10px;
+}
+
+.zoomin, .zoomout {
+    border-bottom: 1px solid darkgray;
+}
+
+.zoomin {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px
+}
+
+.largearrowup {
+    padding-bottom: 2px;
+}
+
+
+.largearrowdown {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 0;
+}
+
+.reports-card-container {
+    margin: auto 1em;
+    padding: 1em;
+    background: white;
+    border-radius: 2px;
+    filter: drop-shadow(1px 1px 25px lightgray);
+}
+
+.reports-card {
+    color: var(--green);
+    margin-top: 1em;
+    height: 100%;
+
+}
+
+.reports-card > * {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: .25em;
+    width: 100%;
+}
+
+.reports-card > * > * {
+    margin: .25em;
+}
+
+.reports-card > * > p {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-width: 4em;
+}
+
+.arrowup {
+	border-color: transparent transparent red transparent;
+	border-width: 10px;
+	border-style: solid;
+	margin: 0 -10px;
+    position: absolute;
+    right: -10px;
+    top: -5px;
+}
+
+.arrowdown {
+	border-color: green transparent transparent transparent;
+	border-width: 10px;
+	border-style: solid;
+	margin: 0 -10px;
+    position: absolute;
+    right: -10px;
+    top: 5px;
+}
+
+#contact {
+    position: relative;
+    text-align: center;
+}
+
+#contact form {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 315px;
+}
+
+#contact form input {
+	width: 100%;
+	height: 100%;
+	padding: 1em 2em;
+	background: white;
+	border: none;
+	border-radius: 25px;
+}
+
+#contact form button {
+    position: absolute;
+    right: 5px;
+}
+
+#contact > :last-child {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -5em;
+    right: -6em;
+    z-index: -1;
+}
+
+#contact > :last-child > :first-child {
+    margin-bottom: -1em;
+}
+
+footer {
+    margin: 1em 0;
+}
+
+footer > :first-child {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer > :last-child {
+    text-align: center;
+}
+
+footer  i.fa.fa-youtube-play {
+    color: var(--coral);
+}
+
+
+
+@media (min-width: 56.25em) {
+    #overview > *:not(:last-child) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .overview-text {
+        text-align: left;
+    }
+
+    .overview-container:nth-child(2) > .overview-text {
+        grid-column: 2;
+    }
+
+    .overview-container:nth-child(2) > .overview-svg {
+        grid-column: 1;
+        grid-row:1;
+    }
+
+    #prevention .prevention-column {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #prevention .prevention-column:nth-child(even) > :first-child {
+        grid-column: 2;
+    }
+
+    #prevention .prevention-column:nth-child(even) > :last-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #reports {
+        grid-template-columns: 3fr 1fr;
+    }
+
+}
